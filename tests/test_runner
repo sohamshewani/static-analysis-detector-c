@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# This script is used to run the unit and integration tests
+
+# Change directory to the project root
+pushd $(dirname "$0")/..
+
+# Run unit tests
+make check
+
+# Run integration tests
+make test
+
+# Pop back to the original directory
+popd
